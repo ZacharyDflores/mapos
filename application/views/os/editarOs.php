@@ -9,7 +9,7 @@
                 <span class="icon">
                     <i class="icon-tags"></i>
                 </span>
-                <h5>Editar O.S</h5>
+                <h5>Editar Ordenes de Servicio</h5>
             </div>
             <div class="widget-content nopadding">
 
@@ -19,7 +19,7 @@
                         <li class="active" id="tabDetalhes"><a href="#tab1" data-toggle="tab">Detalles de la O.S</a></li>
                         <li id="tabProdutos"><a href="#tab2" data-toggle="tab">Productos</a></li>
                         <li id="tabServicos"><a href="#tab3" data-toggle="tab">Servicios</a></li>
-                        <li id="tabAnexos"><a href="#tab4" data-toggle="tab">Añadir</a></li>
+                        <li id="tabAnexos"><a href="#tab4" data-toggle="tab">Anexos</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
@@ -30,7 +30,7 @@
                                     <?php echo form_hidden('idOs',$result->idOs) ?>
                                     
                                     <div class="span12" style="padding: 1%; margin-left: 0">
-                                        <h3>#Protocolo: <?php echo $result->idOs ?></h3>
+                                        <h3>Orden Numero: <?php echo $result->idOs ?></h3>
                                         
                                         <div class="span6" style="margin-left: 0">
                                             <label for="cliente">Cliente<span class="required">*</span></label>
@@ -39,7 +39,7 @@
                                             <input id="valorTotal" type="hidden" name="valorTotal" value=""  />
                                         </div>
                                         <div class="span6">
-                                            <label for="tecnico">Técnico / Responsable<span class="required">*</span></label>
+                                            <label for="tecnico">Tecnico / Responsable<span class="required">*</span></label>
                                             <input id="tecnico" class="span12" type="text" name="tecnico" value="<?php echo $result->nome ?>"  />
                                             <input id="usuarios_id" class="span12" type="hidden" name="usuarios_id" value="<?php echo $result->usuarios_id ?>"  />
                                         </div>
@@ -48,19 +48,19 @@
                                         <div class="span3">
                                             <label for="status">Estado<span class="required">*</span></label>
                                             <select class="span12" name="status" id="status" value="">
-                                                <option <?php if($result->status == 'Presupuesto'){echo 'selected';} ?> value="Presupuesto">Presupuesto</option>
-                                                <option <?php if($result->status == 'Abierto'){echo 'selected';} ?> value="Abierto">Abierto</option>
-                                                <option <?php if($result->status == 'Facturado'){echo 'selected';} ?> value="Facturado">Facturado</option>
+                                                <option <?php if($result->status == 'Orçamento'){echo 'selected';} ?> value="Orçamento">Presupuesto</option>
+                                                <option <?php if($result->status == 'Aberto'){echo 'selected';} ?> value="Aberto">Abierto</option>
+                                                <option <?php if($result->status == 'Faturado'){echo 'selected';} ?> value="Faturado">Facturado</option>
                                                 <option <?php if($result->status == 'Finalizado'){echo 'selected';} ?> value="Finalizado">Finalizado</option>
                                                 <option <?php if($result->status == 'Cancelado'){echo 'selected';} ?> value="Cancelado">Cancelado</option>
                                             </select>
                                         </div>
                                         <div class="span3">
-                                            <label for="dataInicial">Fecha Inicial<span class="required">*</span></label>
+                                            <label for="dataInicial">Fecha de Ingreso<span class="required">*</span></label>
                                             <input id="dataInicial" class="span12 datepicker" type="text" name="dataInicial" value="<?php echo date('d/m/Y', strtotime($result->dataInicial)); ?>"  />
                                         </div>
                                         <div class="span3">
-                                            <label for="dataFinal">Fecha Final</label>
+                                            <label for="dataFinal">Fecha de Entrega</label>
                                             <input id="dataFinal" class="span12 datepicker" type="text" name="dataFinal" value="<?php echo date('d/m/Y', strtotime($result->dataFinal)); ?>"  />
                                         </div>
 
@@ -88,7 +88,7 @@
                                             <textarea class="span12" name="observacoes" id="observacoes" cols="30" rows="5"><?php echo $result->observacoes ?></textarea>
                                         </div>
                                         <div class="span6">
-                                            <label for="laudoTecnico">Diagnostico Técnico</label>
+                                            <label for="laudoTecnico">Diagnostico Tecnico</label>
                                             <textarea class="span12" name="laudoTecnico" id="laudoTecnico" cols="30" rows="5"><?php echo $result->laudoTecnico ?></textarea>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
                                         <tr>
                                             <th>Producto</th>
                                             <th>Cantidad</th>
-                                            <th>Acción</th>
+                                            <th>Acciones</th>
                                             <th>Sub-total</th>
                                         </tr>
                                     </thead>
@@ -149,7 +149,7 @@
                                             echo '<tr>';
                                             echo '<td>'.$p->descricao.'</td>';
                                             echo '<td>'.$p->quantidade.'</td>';
-                                            echo '<td><a href="" idAcao="'.$p->idProdutos_os.'" prodAcao="'.$p->idProdutos.'" quantAcao="'.$p->quantidade.'" title="Borrar Producto" class="btn btn-danger"><i class="icon-remove icon-white"></i></a></td>';
+                                            echo '<td><a href="" idAcao="'.$p->idProdutos_os.'" prodAcao="'.$p->idProdutos.'" quantAcao="'.$p->quantidade.'" title="Eliminar Produto" class="btn btn-danger"><i class="icon-remove icon-white"></i></a></td>';
                                             echo '<td>R$ '.number_format($p->subTotal,2,',','.').'</td>';
                                             echo '</tr>';
                                         }?>
@@ -187,7 +187,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Servicio</th>
-                                                <th>Accion</th>
+                                                <th>Acciones</th>
                                                 <th>Sub-total</th>
                                             </tr>
                                         </thead>
@@ -294,9 +294,9 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
-    <a href="" id-imagem="" class="btn btn-inverse" id="download">Download</a>
-    <a href="" link="" class="btn btn-danger" id="excluir-anexo">Excluir Anexo</a>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+    <a href="" id-imagem="" class="btn btn-inverse" id="download">Descargar</a>
+    <a href="" link="" class="btn btn-danger" id="excluir-anexo">Eliminar Anexo</a>
   </div>
 </div>
 
@@ -315,7 +315,7 @@
     
     <div class="span12 alert alert-info" style="margin-left: 0"> Los campos con asterisco son obligatorios.</div>
     <div class="span12" style="margin-left: 0"> 
-      <label for="descricao">Descrição</label>
+      <label for="descricao">Descripcion</label>
       <input class="span12" id="descricao" type="text" name="descricao" value="Fatura de Venda - #<?php echo $result->idOs; ?> "  />
       
     </div>  
@@ -344,12 +344,12 @@
     
     <div class="span12" style="margin-left: 0"> 
       <div class="span4" style="margin-left: 0">
-        <label for="recebido">Recibido?</label>
+        <label for="recebido">Pagado?</label>
         &nbsp &nbsp &nbsp &nbsp <input  id="recebido" type="checkbox" name="recebido" value="1" /> 
       </div>
       <div id="divRecebimento" class="span8" style=" display: none">
         <div class="span6">
-          <label for="recebimento">Fecha de Recibimiento</label>
+          <label for="recebimento">Fecha De Pago</label>
           <input class="span12 datepicker" id="recebimento" type="text" name="recebimento" /> 
         </div>
         <div class="span6">
@@ -534,7 +534,7 @@ $(document).ready(function(){
              var quantidade = parseInt($("#quantidade").val());
              var estoque = parseInt($("#estoque").val());
              if(estoque < quantidade){
-                alert('No hay stock suficiente.');
+                alert('No hay suficiente inventario.');
              }
              else{
                  var dados = $( form ).serialize();
@@ -552,7 +552,7 @@ $(document).ready(function(){
                         $("#produto").val('').focus();
                     }
                     else{
-                        alert('Ocorrio un error al agregar un producto.');
+                        alert('Ocurrio un error al intentar agregar un producto.');
                     }
                   }
                   });
@@ -587,7 +587,7 @@ $(document).ready(function(){
                         $("#servico").val('').focus();
                     }
                     else{
-                        alert('Ocurrio un error al añadir el servicio.');
+                        alert('Ocurrio un error al intentar agregar un servicio.');
                     }
                   }
                   });
@@ -626,7 +626,7 @@ $(document).ready(function(){
                     }
                   },
                   error : function() {
-                      $("#divAnexos").html('<div class="alert alert-danger fade in"><button type="button" class="close" data-dismiss="alert">×</button><strong>Atencion!</strong> Ocurrio un error. Verifique los archivos adjuntos.</div>');      
+                      $("#divAnexos").html('<div class="alert alert-danger fade in"><button type="button" class="close" data-dismiss="alert">×</button><strong>Atencion!</strong> Ocurrio un error. Verifique los archivos agregados.</div>');      
                   }
 
                   });
@@ -655,7 +655,7 @@ $(document).ready(function(){
                         
                     }
                     else{
-                        alert('Ocurrio un error al intentar eliminar el servicio.');
+                        alert('Ocurrio un error al intentar eliminar un producto.');
                     }
                   }
                   });
@@ -682,7 +682,7 @@ $(document).ready(function(){
 
                     }
                     else{
-                        alert('Ocurrio un error al intentar eliminar el servicio.');
+                        alert('Ocurrio un error al intentar eliminar un servicio.');
                     }
                   }
                   });
@@ -737,7 +737,6 @@ $(document).ready(function(){
 });
 
 </script>
-
 
 
 
