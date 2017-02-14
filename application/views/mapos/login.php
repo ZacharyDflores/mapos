@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es-ve">
     
 <head>
         <title>Map Os</title><meta charset="UTF-8" />
@@ -60,7 +60,7 @@
                           senha: { required: true}
                     },
                     messages:{
-                          email: { required: 'Campo Requerido.', email: 'Insira Email válido'},
+                          email: { required: 'Campo Requerido.', email: 'Introduzca un Email valido'},
                           senha: {required: 'Campo Requerido.'}
                     },
                    submitHandler: function( form ){       
@@ -111,10 +111,10 @@
             <h4 id="myModalLabel">MapOS</h4>
           </div>
           <div class="modal-body">
-            <h5 style="text-align: center">Os dados de acesso estão incorretos, por favor tente novamente!</h5>
+            <h5 style="text-align: center">Los datos de acceso son incorrectos, por favor intente nuevamente!</h5>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Fechar</button>
+            <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK, ENTENDIDO</button>
 
           </div>
         </div>
@@ -123,7 +123,6 @@
     </body>
 
 </html>
-
 
 
 
