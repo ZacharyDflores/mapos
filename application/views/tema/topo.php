@@ -28,8 +28,8 @@
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
    
-    <li class=""><a title="" href="<?php echo base_url();?>index.php/mapos/minhaConta"><i class="icon icon-star"></i> <span class="text">Minha Conta</span></a></li>
-    <li class=""><a title="" href="<?php echo base_url();?>index.php/mapos/sair"><i class="icon icon-share-alt"></i> <span class="text">Sair do Sistema</span></a></li>
+    <li class=""><a title="" href="<?php echo base_url();?>index.php/mapos/minhaConta"><i class="icon icon-star"></i> <span class="text">Mi Cuenta</span></a></li>
+    <li class=""><a title="" href="<?php echo base_url();?>index.php/mapos/sair"><i class="icon icon-share-alt"></i> <span class="text">Salir del Sistema</span></a></li>
   </ul>
 </div>
 
@@ -56,30 +56,30 @@
     <?php } ?>
     
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vProduto')){ ?>
-        <li class="<?php if(isset($menuProdutos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/produtos"><i class="icon icon-barcode"></i> <span>Produtos</span></a></li>
+        <li class="<?php if(isset($menuProdutos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/produtos"><i class="icon icon-barcode"></i> <span>Productos</span></a></li>
     <?php } ?>
     
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vServico')){ ?>
-        <li class="<?php if(isset($menuServicos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/servicos"><i class="icon icon-wrench"></i> <span>Serviços</span></a></li>
+        <li class="<?php if(isset($menuServicos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/servicos"><i class="icon icon-wrench"></i> <span>Servicios</span></a></li>
     <?php } ?>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){ ?>
-        <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Ordens de Serviço</span></a></li>
+        <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Ordenes de Servicio</span></a></li>
     <?php } ?>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
-        <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/vendas"><i class="icon icon-shopping-cart"></i> <span>Vendas</span></a></li>
+        <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/vendas"><i class="icon icon-shopping-cart"></i> <span>Ventas</span></a></li>
     <?php } ?>
     
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vArquivo')){ ?>
-        <li class="<?php if(isset($menuArquivos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/arquivos"><i class="icon icon-hdd"></i> <span>Arquivos</span></a></li>
+        <li class="<?php if(isset($menuArquivos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/arquivos"><i class="icon icon-hdd"></i> <span>Archivos</span></a></li>
     <?php } ?>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vLancamento')){ ?>
         <li class="submenu <?php if(isset($menuFinanceiro)){echo 'active open';};?>">
-          <a href="#"><i class="icon icon-money"></i> <span>Financeiro</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
+          <a href="#"><i class="icon icon-money"></i> <span>Finanzas</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
           <ul>
-            <li><a href="<?php echo base_url()?>index.php/financeiro/lancamentos">Lançamentos</a></li>
+            <li><a href="<?php echo base_url()?>index.php/financeiro/lancamentos">Lanzamientos</a></li>
           </ul>
         </li>
     <?php } ?>
@@ -87,7 +87,7 @@
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rCliente') || $this->permission->checkPermission($this->session->userdata('permissao'),'rProduto') || $this->permission->checkPermission($this->session->userdata('permissao'),'rServico') || $this->permission->checkPermission($this->session->userdata('permissao'),'rOs') || $this->permission->checkPermission($this->session->userdata('permissao'),'rFinanceiro') || $this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>
         
         <li class="submenu <?php if(isset($menuRelatorios)){echo 'active open';};?>" >
-          <a href="#"><i class="icon icon-list-alt"></i> <span>Relatórios</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
+          <a href="#"><i class="icon icon-list-alt"></i> <span>Informes</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
           <ul>
 
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rCliente')){ ?>
@@ -97,16 +97,16 @@
                 <li><a href="<?php echo base_url()?>index.php/relatorios/produtos">Produtos</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rServico')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/relatorios/servicos">Serviços</a></li>
+                <li><a href="<?php echo base_url()?>index.php/relatorios/servicos">Servicios</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rOs')){ ?>
-                 <li><a href="<?php echo base_url()?>index.php/relatorios/os">Ordens de Serviço</a></li>
+                 <li><a href="<?php echo base_url()?>index.php/relatorios/os">Ordenes de Servicio</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/relatorios/vendas">Vendas</a></li>
+                <li><a href="<?php echo base_url()?>index.php/relatorios/vendas">Ventas</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rFinanceiro')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/relatorios/financeiro">Financeiro</a></li>
+                <li><a href="<?php echo base_url()?>index.php/relatorios/financeiro">Financiero</a></li>
             <?php } ?>
             
           </ul>
@@ -116,16 +116,16 @@
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cUsuario')  || $this->permission->checkPermission($this->session->userdata('permissao'),'cEmitente') || $this->permission->checkPermission($this->session->userdata('permissao'),'cPermissao') || $this->permission->checkPermission($this->session->userdata('permissao'),'cBackup')){ ?>
         <li class="submenu <?php if(isset($menuConfiguracoes)){echo 'active open';};?>">
-          <a href="#"><i class="icon icon-cog"></i> <span>Configurações</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
+          <a href="#"><i class="icon icon-cog"></i> <span>Configuraciones</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
           <ul>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cUsuario')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/usuarios">Usuários</a></li>
+                <li><a href="<?php echo base_url()?>index.php/usuarios">Usuarios</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cEmitente')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/mapos/emitente">Emitente</a></li>
+                <li><a href="<?php echo base_url()?>index.php/mapos/emitente">Datos de la Empresa</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cPermissao')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/permissoes">Permissões</a></li>
+                <li><a href="<?php echo base_url()?>index.php/permissoes">Permisos</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cBackup')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/mapos/backup">Backup</a></li>
@@ -179,10 +179,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
 
