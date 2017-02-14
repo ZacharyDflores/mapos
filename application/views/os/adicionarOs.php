@@ -53,11 +53,11 @@
                                             </select>
                                         </div>
                                         <div class="span3">
-                                            <label for="dataInicial">Fecha Inicial<span class="required">*</span></label>
+                                            <label for="dataInicial">Fecha De Ingreso<span class="required">*</span></label>
                                             <input id="dataInicial" class="span12 datepicker" type="text" name="dataInicial" value=""  />
                                         </div>
                                         <div class="span3">
-                                            <label for="dataFinal">Fecha Final</label>
+                                            <label for="dataFinal">Fecha de Entrega</label>
                                             <input id="dataFinal" class="span12 datepicker" type="text" name="dataFinal" value=""  />
                                         </div>
 
