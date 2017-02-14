@@ -94,7 +94,7 @@
                 <li><a href="<?php echo base_url()?>index.php/relatorios/clientes">Clientes</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rProduto')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/relatorios/produtos">Produtos</a></li>
+                <li><a href="<?php echo base_url()?>index.php/relatorios/produtos">Productos</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rServico')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/servicos">Servicios</a></li>
