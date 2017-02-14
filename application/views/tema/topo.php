@@ -36,7 +36,7 @@
 <!--start-top-serch-->
 <div id="search">
   <form action="<?php echo base_url()?>index.php/mapos/pesquisar">
-    <input type="text" name="termo" placeholder="Pesquisar..."/>
+    <input type="text" name="termo" placeholder="buscar..."/>
     <button type="submit"  class="tip-bottom" title="Pesquisar"><i class="icon-search icon-white"></i></button>
     
   </form>
