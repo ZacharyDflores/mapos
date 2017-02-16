@@ -1,8 +1,8 @@
 <div class="widget-box">
     <div class="widget-title">
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#tab1">Dados do Cliente</a></li>
-            <li><a data-toggle="tab" href="#tab2">Ordens de Serviço</a></li>
+            <li class="active"><a data-toggle="tab" href="#tab1">Datos del Cliente</a></li>
+            <li><a data-toggle="tab" href="#tab2">Ordenes de Servicio</a></li>
             <div class="buttons">
                     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'eCliente')){
                         echo '<a title="Icon Title" class="btn btn-mini btn-info" href="'.base_url().'index.php/clientes/editar/'.$result->idClientes.'"><i class="icon-pencil icon-white"></i> Editar</a>'; 
@@ -19,7 +19,7 @@
                                 <div class="accordion-heading">
                                     <div class="widget-title">
                                         <a data-parent="#collapse-group" href="#collapseGOne" data-toggle="collapse">
-                                            <span class="icon"><i class="icon-list"></i></span><h5>Dados Pessoais</h5>
+                                            <span class="icon"><i class="icon-list"></i></span><h5>Datos Personales</h5>
                                         </a>
                                     </div>
                                 </div>
@@ -28,15 +28,15 @@
                                         <table class="table table-bordered">
                                             <tbody>
                                                 <tr>
-                                                    <td style="text-align: right; width: 30%"><strong>Nome</strong></td>
+                                                    <td style="text-align: right; width: 30%"><strong>Nombre</strong></td>
                                                     <td><?php echo $result->nomeCliente ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right"><strong>Documento</strong></td>
+                                                    <td style="text-align: right"><strong>Cedula/DNI</strong></td>
                                                     <td><?php echo $result->documento ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right"><strong>Data de Cadastro</strong></td>
+                                                    <td style="text-align: right"><strong>Fecha de Registro</strong></td>
                                                     <td><?php echo date('d/m/Y',  strtotime($result->dataCadastro)) ?></td>
                                                 </tr>
                                             </tbody>
@@ -48,7 +48,7 @@
                                 <div class="accordion-heading">
                                     <div class="widget-title">
                                         <a data-parent="#collapse-group" href="#collapseGTwo" data-toggle="collapse">
-                                            <span class="icon"><i class="icon-list"></i></span><h5>Contatos</h5>
+                                            <span class="icon"><i class="icon-list"></i></span><h5>Contactos</h5>
                                         </a>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                         <table class="table table-bordered">
                                             <tbody>
                                                 <tr>
-                                                    <td style="text-align: right; width: 30%"><strong>Telefone</strong></td>
+                                                    <td style="text-align: right; width: 30%"><strong>Teléfono Fijo</strong></td>
                                                     <td><?php echo $result->telefone ?></td>
                                                 </tr>
                                                 <tr>
@@ -77,7 +77,7 @@
                                 <div class="accordion-heading">
                                     <div class="widget-title">
                                         <a data-parent="#collapse-group" href="#collapseGThree" data-toggle="collapse">
-                                            <span class="icon"><i class="icon-list"></i></span><h5>Endereço</h5>
+                                            <span class="icon"><i class="icon-list"></i></span><h5>Dirección</h5>
                                         </a>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@
                                         <table class="table table-bordered">
                                             <tbody>
                                                 <tr>
-                                                    <td style="text-align: right; width: 30%"><strong>Rua</strong></td>
+                                                    <td style="text-align: right; width: 30%"><strong>Calle</strong></td>
                                                     <td><?php echo $result->rua ?></td>
                                                 </tr>
                                                 <tr>
@@ -94,16 +94,16 @@
                                                     <td><?php echo $result->numero ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right"><strong>Bairro</strong></td>
+                                                    <td style="text-align: right"><strong>Barrio</strong></td>
                                                     <td><?php echo $result->bairro ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right"><strong>Cidade</strong></td>
-                                                    <td><?php echo $result->cidade ?> - <?php echo $result->estado ?></td>
+                                                    <td style="text-align: right"><strong>Ciudad</strong></td>
+                                                    <td><?php echo $result->cidade ?> 
                                                 </tr>
                                                 <tr>
-                                                    <td style="text-align: right"><strong>CEP</strong></td>
-                                                    <td><?php echo $result->cep ?></td>
+                                                    <td style="text-align: right"><strong>Codigo Postal</strong></td>
+                                                    <td><?php echo $result->cep ?></td>                                               
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -126,17 +126,17 @@
                             <thead>
                                 <tr style="backgroud-color: #2D335B">
                                     <th>#</th>
-                                    <th>Data Inicial</th>
-                                    <th>Data Final</th>
-                                    <th>Descricao</th>
-                                    <th>Defeito</th>
+                                    <th>Fecha de Ingreso</th>
+                                    <th>Fecha de Entrega</th>
+                                    <th>Descripción</th>
+                                    <th>Defecto</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
 
                                 <tr>
-                                    <td colspan="6">Nenhuma OS Cadastrada</td>
+                                    <td colspan="6">Ninguna O.S Registrada</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -150,10 +150,10 @@
                             <thead>
                                 <tr style="backgroud-color: #2D335B">
                                     <th>#</th>
-                                    <th>Data Inicial</th>
-                                    <th>Data Final</th>
-                                    <th>Descricao</th>
-                                    <th>Defeito</th>
+                                    <th>Fecha de Ingreso</th>
+                                    <th>Fecha de Entrega</th>
+                                    <th>Descripción</th>
+                                    <th>Defecto</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -171,7 +171,7 @@
 
                     echo '<td>';
                     if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){
-                        echo '<a href="' . base_url() . 'index.php/os/visualizar/' . $r->idOs . '" style="margin-right: 1%" class="btn tip-top" title="Ver mais detalhes"><i class="icon-eye-open"></i></a>'; 
+                        echo '<a href="' . base_url() . 'index.php/os/visualizar/' . $r->idOs . '" style="margin-right: 1%" class="btn tip-top" title="Ver mas detalles"><i class="icon-eye-open"></i></a>'; 
                     }
                     if($this->permission->checkPermission($this->session->userdata('permissao'),'eOs')){
                         echo '<a href="' . base_url() . 'index.php/os/editar/' . $r->idOs . '" class="btn btn-info tip-top" title="Editar OS"><i class="icon-pencil icon-white"></i></a>'; 
