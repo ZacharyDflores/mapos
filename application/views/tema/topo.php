@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ve">
 <head>
-<title>Map OS</title>
+<title>Sistema de Control de Ordenes de Servicio</title>
 <meta charset="UTF-8" />
+<link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.png" type="image/png"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-responsive.min.css" />
@@ -20,7 +21,7 @@
 
 <!--Header-part-->
 <div id="header">
-  <h1><a href="">Map OS</a></h1>
+  <h1><a href="">Map O.S</a></h1>
 </div>
 <!--close-Header-part--> 
 
@@ -36,7 +37,7 @@
 <!--start-top-serch-->
 <div id="search">
   <form action="<?php echo base_url()?>index.php/mapos/pesquisar">
-    <input type="text" name="termo" placeholder="buscar..."/>
+    <input type="text" name="termo" placeholder="Buscar..."/>
     <button type="submit"  class="tip-bottom" title="Pesquisar"><i class="icon-search icon-white"></i></button>
     
   </form>
@@ -49,15 +50,15 @@
   <ul>
 
 
-    <li class="<?php if(isset($menuPainel)){echo 'active';};?>"><a href="<?php echo base_url()?>"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>
+    <li class="<?php if(isset($menuPainel)){echo 'active';};?>"><a href="<?php echo base_url()?>"><i class="icon icon-home"></i> <span>Inicio</span></a></li>
     
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vCliente')){ ?>
         <li class="<?php if(isset($menuClientes)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/clientes"><i class="icon icon-group"></i> <span>Clientes</span></a></li>
     <?php } ?>
     
-    <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vProduto')){ ?>
+ <!--   <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vProduto')){ ?>
         <li class="<?php if(isset($menuProdutos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/produtos"><i class="icon icon-barcode"></i> <span>Productos</span></a></li>
-    <?php } ?>
+  -->  <?php } ?>
     
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vServico')){ ?>
         <li class="<?php if(isset($menuServicos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/servicos"><i class="icon icon-wrench"></i> <span>Servicios</span></a></li>
@@ -67,14 +68,14 @@
         <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Ordenes de Servicio</span></a></li>
     <?php } ?>
 
-    <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
+ <!--   <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
         <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/vendas"><i class="icon icon-shopping-cart"></i> <span>Ventas</span></a></li>
-    <?php } ?>
+ -->   <?php } ?>
     
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vArquivo')){ ?>
         <li class="<?php if(isset($menuArquivos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/arquivos"><i class="icon icon-hdd"></i> <span>Archivos</span></a></li>
     <?php } ?>
-
+<!--
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vLancamento')){ ?>
         <li class="submenu <?php if(isset($menuFinanceiro)){echo 'active open';};?>">
           <a href="#"><i class="icon icon-money"></i> <span>Finanzas</span> <span class="label"><i class="icon-chevron-down"></i></span></a>
@@ -83,7 +84,7 @@
           </ul>
         </li>
     <?php } ?>
-
+-->
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rCliente') || $this->permission->checkPermission($this->session->userdata('permissao'),'rProduto') || $this->permission->checkPermission($this->session->userdata('permissao'),'rServico') || $this->permission->checkPermission($this->session->userdata('permissao'),'rOs') || $this->permission->checkPermission($this->session->userdata('permissao'),'rFinanceiro') || $this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>
         
         <li class="submenu <?php if(isset($menuRelatorios)){echo 'active open';};?>" >
@@ -93,18 +94,18 @@
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rCliente')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/clientes">Clientes</a></li>
             <?php } ?>
-            <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rProduto')){ ?>
+         <!--   <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rProduto')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/produtos">Productos</a></li>
-            <?php } ?>
+           --> <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rServico')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/servicos">Servicios</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rOs')){ ?>
                  <li><a href="<?php echo base_url()?>index.php/relatorios/os">Ordenes de Servicio</a></li>
             <?php } ?>
-            <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>
+           <!-- <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/vendas">Ventas</a></li>
-            <?php } ?>
+       -->     <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rFinanceiro')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/financeiro">Financiero</a></li>
             <?php } ?>
@@ -128,7 +129,7 @@
                 <li><a href="<?php echo base_url()?>index.php/permissoes">Permisos</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'cBackup')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/mapos/backup">Backup</a></li>
+                <li><a href="<?php echo base_url()?>index.php/mapos/backup">Descargar Archivo de Respaldo</a></li>
             <?php } ?>
  
           </ul>
@@ -140,7 +141,7 @@
 </div>
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="<?php echo base_url()?>" title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a> <?php if($this->uri->segment(1) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1)?>" class="tip-bottom" title="<?php echo ucfirst($this->uri->segment(1));?>"><?php echo ucfirst($this->uri->segment(1));?></a> <?php if($this->uri->segment(2) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1).'/'.$this->uri->segment(2).'/'.$this->uri->segment(3) ?>" class="current tip-bottom" title="<?php echo ucfirst($this->uri->segment(2)); ?>"><?php echo ucfirst($this->uri->segment(2));} ?></a> <?php }?></div>
+    <div id="breadcrumb"> <a href="<?php echo base_url()?>" title="Inicio" class="tip-bottom"><i class="icon-home"></i> Inicio</a> <?php if($this->uri->segment(1) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1)?>" class="tip-bottom" title="<?php echo ucfirst($this->uri->segment(1));?>"><?php echo ucfirst($this->uri->segment(1));?></a> <?php if($this->uri->segment(2) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1).'/'.$this->uri->segment(2).'/'.$this->uri->segment(3) ?>" class="current tip-bottom" title="<?php echo ucfirst($this->uri->segment(2)); ?>"><?php echo ucfirst($this->uri->segment(2));} ?></a> <?php }?></div>
   </div>
   <div class="container-fluid">
     <div class="row-fluid">
@@ -160,18 +161,19 @@
                       <?php }?>
                           
                       <?php if(isset($view)){echo $this->load->view($view);}?>
-
-
+            
+          
       </div>
     </div>
   </div>
 </div>
 <!--Footer-part-->
-<div class="row-fluid">
-  <div id="footer" class="span12"> <?php echo date('Y'); ?> &copy; MAP OS - Ramon Silva</div>
+<div class="row-fluid"> 
+<div id="footer" class="span12"> <?php echo date('Y'); ?> &copy; MAP OS - <?php $this->db->select('nome');$q = $this->db->get('emitente'); $data = $q->result_array(); echo($data[0]['nome']);?></div>
 </div>
 <!--end-Footer-part-->
 
+</div>  
 
 <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script> 
 <script src="<?php echo base_url();?>assets/js/matrix.js"></script> 
@@ -179,4 +181,3 @@
 
 </body>
 </html>
-
