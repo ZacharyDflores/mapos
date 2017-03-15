@@ -104,7 +104,7 @@ else{ ?>
   <form action="<?php echo base_url() ?>index.php/servicos/excluir" method="post" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h5 id="myModalLabel">Excluir Serviço</h5>
+    <h5 id="myModalLabel">Eliminar Servicio</h5>
   </div>
   <div class="modal-body">
     <input type="hidden" id="idServico" name="id" value="" />
@@ -112,7 +112,7 @@ else{ ?>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-    <button class="btn btn-danger">Excluir</button>
+    <button class="btn btn-danger">Eliminar</button>
   </div>
   </form>
 </div>
