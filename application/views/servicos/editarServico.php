@@ -5,26 +5,26 @@
                                                 <span class="icon">
                                                       <i class="icon-align-justify"></i>
                                                 </span>
-                                                <h5>Editar Serviço</h5>
+                                                <h5>Editar Servicios</h5>
                                           </div>
                                           <div class="widget-content nopadding">
                                                 <?php echo $custom_error; ?>
                                                 <form action="<?php echo current_url(); ?>" id="formServico" method="post" class="form-horizontal" >
                                                     <?php echo form_hidden('idServicos',$result->idServicos) ?>
                                                     <div class="control-group">
-                                                            <label for="nome" class="control-label">Nome<span class="required">*</span></label>
+                                                            <label for="nome" class="control-label">Nombre<span class="required">*</span></label>
                                                             <div class="controls">
                                                                   <input id="nome" type="text" name="nome" value="<?php echo $result->nome ?>"  />
                                                             </div>
                                                       </div>
                                                       <div class="control-group">
-                                                            <label for="preco" class="control-label"><span class="required">Preço*</span></label>
+                                                            <label for="preco" class="control-label"><span class="required">Precio*</span></label>
                                                             <div class="controls">
                                                                 <input id="preco" class="money" type="text" name="preco" value="<?php echo $result->preco ?>"  />
                                                             </div>
                                                       </div>
                                                       <div class="control-group">
-                                                            <label for="descricao" class="control-label">Descrição</label>
+                                                            <label for="descricao" class="control-label">Descripción</label>
                                                             <div class="controls">
                                                                   <input id="descricao" type="text" name="descricao" value="<?php echo $result->descricao ?>"  />
                                                             </div>
@@ -33,8 +33,8 @@
                                                       <div class="form-actions">
                                                       <div class="span12">
                                                             <div class="span6 offset3">
-                                                            <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i> Alterar</button>
-                                                            <a href="<?php echo base_url()?>index.php/servicos" id="btnAdicionar" class="btn"><i class="icon-arrow-left"></i> Voltar</a>
+                                                            <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"></i> Modificar</button>
+                                                            <a href="<?php echo base_url()?>index.php/servicos" id="btnAdicionar" class="btn"><i class="icon-arrow-left"></i> Volver</a>
                                                             </div>
                                                       </div>
                                                       </div>
@@ -71,6 +71,5 @@
            });
       });
 </script>
-
 
 
