@@ -1,4 +1,4 @@
-<a href="<?php echo base_url()?>index.php/usuarios/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Adicionar Usuário</a>
+<a href="<?php echo base_url()?>index.php/usuarios/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Usuarios</a>
 <?php
 if(!$results){?>
         <div class="widget-box">
@@ -6,7 +6,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-user"></i>
         </span>
-        <h5>Usuários</h5>
+        <h5>Usuarios</h5>
 
      </div>
 
@@ -17,16 +17,16 @@ if(!$results){?>
     <thead>
         <tr style="backgroud-color: #2D335B">
             <th>#</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
+            <th>Nombre</th>
+            <th>Cedula/RIF</th>
+            <th>Telefono</th>
             <th>Nível</th>
             <th></th>
         </tr>
     </thead>
     <tbody>    
         <tr>
-            <td colspan="5">Nenhum Usuário Cadastrado</td>
+            <td colspan="5">Ningún Usuario Encontrado</td>
         </tr>
     </tbody>
 </table>
@@ -41,7 +41,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-user"></i>
          </span>
-        <h5>Usuários</h5>
+        <h5>Usuarios</h5>
 
      </div>
 
@@ -52,9 +52,9 @@ if(!$results){?>
     <thead>
         <tr style="backgroud-color: #2D335B">
             <th>#</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
+            <th>Nombre</th>
+            <th>Cedula/RIF</th>
+            <th>Telefono</th>
             <th>Nível</th>
             <th></th>
         </tr>
@@ -65,11 +65,11 @@ if(!$results){?>
             echo '<tr>';
             echo '<td>'.$r->idUsuarios.'</td>';
             echo '<td>'.$r->nome.'</td>';
-            echo '<td>'.$r->cpf.'</td>';
+            echo '<td>'.$r->rg.'</td>';
             echo '<td>'.$r->telefone.'</td>';
             echo '<td>'.$r->permissao.'</td>';
             echo '<td>
-                      <a href="'.base_url().'index.php/usuarios/editar/'.$r->idUsuarios.'" class="btn btn-info tip-top" title="Editar Usuário"><i class="icon-pencil icon-white"></i></a>
+                      <a href="'.base_url().'index.php/usuarios/editar/'.$r->idUsuarios.'" class="btn btn-info tip-top" title="Editar Usuario"><i class="icon-pencil icon-white"></i></a>
                   </td>';
             echo '</tr>';
         }?>
