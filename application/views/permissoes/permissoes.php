@@ -1,4 +1,4 @@
-<a href="<?php echo base_url();?>index.php/permissoes/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Adicionar Permissão</a>
+<a href="<?php echo base_url();?>index.php/permissoes/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Añadir Permisos</a>
 <?php
 if(!$results){?>
 
@@ -7,7 +7,7 @@ if(!$results){?>
             <span class="icon">
                 <i class="icon-lock"></i>
             </span>
-            <h5>Permissões</h5>
+            <h5>Permisos</h5>
 
         </div>
 
@@ -16,15 +16,15 @@ if(!$results){?>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nome</th>
-                        <th>Data de Criação</th>
-                        <th>Situação</th>
+                        <th>Nombre</th>
+                        <th>Fecha de Creacion</th>
+                        <th>Situacion</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="5">Nenhuma Permissão foi cadastrada</td>
+                        <td colspan="5">Ningun Permiso fue Registrado</td>
                     </tr>
                 </tbody>
             </table>
@@ -40,7 +40,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-lock"></i>
          </span>
-        <h5>Permissões</h5>
+        <h5>Permisos</h5>
 
      </div>
 
@@ -51,9 +51,9 @@ if(!$results){?>
     <thead>
         <tr>
             <th>#</th>
-            <th>Nome</th>
-            <th>Data de Criação</th>
-            <th>Situação</th>
+            <th>Nombre</th>
+            <th>Fecha de Creacion</th>
+            <th>Situacion</th>
             <th></th>
         </tr>
     </thead>
@@ -66,8 +66,8 @@ if(!$results){?>
             echo '<td>'.date('d/m/Y',strtotime($r->data)).'</td>';
             echo '<td>'.$situacao.'</td>';
             echo '<td>
-                      <a href="'.base_url().'index.php/permissoes/editar/'.$r->idPermissao.'" class="btn btn-info tip-top" title="Editar Permissão"><i class="icon-pencil icon-white"></i></a>
-                      <a href="#modal-excluir" role="button" data-toggle="modal" permissao="'.$r->idPermissao.'" class="btn btn-danger tip-top" title="Desativar Permissão"><i class="icon-remove icon-white"></i></a>
+                      <a href="'.base_url().'index.php/permissoes/editar/'.$r->idPermissao.'" class="btn btn-info tip-top" title="Editar Permisos"><i class="icon-pencil icon-white"></i></a>
+                      <a href="#modal-excluir" role="button" data-toggle="modal" permissao="'.$r->idPermissao.'" class="btn btn-danger tip-top" title="Desactivar Permisos"><i class="icon-remove icon-white"></i></a>
                   </td>';
             echo '</tr>';
         }?>
@@ -88,15 +88,15 @@ if(!$results){?>
   <form action="<?php echo base_url() ?>index.php/permissoes/desativar" method="post" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h5 id="myModalLabel">Desativar Permissão</h5>
+    <h5 id="myModalLabel">Desactivar Permisos</h5>
   </div>
   <div class="modal-body">
     <input type="hidden" id="idPermissao" name="id" value="" />
-    <h5 style="text-align: center">Deseja realmente desativar esta permissão?</h5>
+    <h5 style="text-align: center">Realmente desea desactivar estos permisos?</h5>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-    <button class="btn btn-danger">Excluir</button>
+    <button class="btn btn-danger">Eliminar</button>
   </div>
   </form>
 </div>
