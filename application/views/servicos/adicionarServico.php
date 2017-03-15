@@ -5,25 +5,25 @@
                 <span class="icon">
                     <i class="icon-align-justify"></i>
                 </span>
-                <h5>Cadastro de Serviço</h5>
+                <h5>Registro de Servicios</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php echo $custom_error; ?>
                 <form action="<?php echo current_url(); ?>" id="formServico" method="post" class="form-horizontal" >
                     <div class="control-group">
-                        <label for="nome" class="control-label">Nome<span class="required">*</span></label>
+                        <label for="nome" class="control-label">Nombre<span class="required">*</span></label>
                         <div class="controls">
                             <input id="nome" type="text" name="nome" value="<?php echo set_value('nome'); ?>"  />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="preco" class="control-label"><span class="required">Preço*</span></label>
+                        <label for="preco" class="control-label"><span class="required">Precio*</span></label>
                         <div class="controls">
                             <input id="preco" class="money" type="text" name="preco" value="<?php echo set_value('preco'); ?>"  />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="descricao" class="control-label">Descrição</label>
+                        <label for="descricao" class="control-label">Descripción</label>
                         <div class="controls">
                             <input id="descricao" type="text" name="descricao" value="<?php echo set_value('descricao'); ?>"  />
                         </div>
@@ -32,8 +32,8 @@
                     <div class="form-actions">
                         <div class="span12">
                             <div class="span6 offset3">
-                                <button type="submit" class="btn btn-success"><i class="icon-plus icon-white"></i> Adicionar</button>
-                                <a href="<?php echo base_url() ?>index.php/servicos" id="btnAdicionar" class="btn"><i class="icon-arrow-left"></i> Voltar</a>
+                                <button type="submit" class="btn btn-success"><i class="icon-plus icon-white"></i> Añadir</button>
+                                <a href="<?php echo base_url() ?>index.php/servicos" id="btnAdicionar" class="btn"><i class="icon-arrow-left"></i> Volver</a>
                             </div>
                         </div>
                     </div>
