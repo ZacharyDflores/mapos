@@ -1,6 +1,7 @@
 # MapOs 
-Sistema de Controle de Ordens de Serviço
-### [https://www.sistemamapos.esy.es](https://www.sistemamapos.esy.es)
+Esta version esta en pleno desarrollo, pronto estara disponible
+Sistema de Control de Ordenes de Servicio
+###
 
 
 ### Frameworks/Bibliotecas
