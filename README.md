@@ -1,5 +1,6 @@
 # MapOs 
-Esta version esta en pleno desarrollo, pronto estara disponible
+Esta version esta en pleno desarrollo, pronto estara disponible para su uso
+
 Sistema de Control de Ordenes de Servicio
 ###
 
@@ -10,7 +11,7 @@ Sistema de Control de Ordenes de Servicio
 * [jquery/jquery](https://github.com/jquery/jquery) 
 * [jquery/jquery-ui](https://github.com/jquery/jquery-ui) 
 
-### Requerimento
+### Requerimientos
 * PHP >= 5.4.0
 * MySQL
 
